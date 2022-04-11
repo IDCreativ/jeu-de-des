@@ -104,6 +104,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	background: #ffffff;
 	.current {
 		display: flex;
 		flex-direction: column;
@@ -140,7 +141,8 @@ body {
 			text-align: center;
 		}
 	}
-    &.active {
+    &.player-active {
+		background: #f5f5f5;
         .global {
             .title {
                 color: black;
@@ -160,10 +162,10 @@ body {
     }
 }
 
-#player-1 {
-	background: #f5f5f5;
-}
+// #player-1 {
+// 	background: #f5f5f5;
+// }
 
-#player-2 {
-	background: #ffffff;
-}
+// #player-2 {
+// 	background: #ffffff;
+// }

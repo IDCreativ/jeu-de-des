@@ -19,22 +19,22 @@
 		<div id="app">
 			<div id="playground" class="container-fluid shadow">
 				<div class="row">
-					<div id="player-1" class="col-md-6 active">
+					<div id="player-1" class="col-md-6 player-active">
 						<div class="empty"></div>
 						<div class="global">
 							<div class="title">Player 1</div>
-							<div id="js-global-1" class="global-score">43</div>
+							<div id="js-global-1" class="global-score">0</div>
 						</div>
 						<div class="current">
 							<span>Current</span>
-							<div id="js-score-player-1" class="score">11</div>
+							<div id="js-score-player-1" class="score">0</div>
 						</div>
 					</div>
 					<div id="player-2" class="col-md-6">
 						<div class="empty"></div>
 						<div class="global">
 							<div class="title">Player 2</div>
-							<div id="js-global-2" class="global-score">72</div>
+							<div id="js-global-2" class="global-score">0</div>
 						</div>
 						<div class="current">
 							<span>Current</span>
@@ -72,6 +72,40 @@
 			</div>
 		</div>
 
+		<!-- Modals -->
+		<div
+			class="modal fade"
+			id="messageModal"
+			tabindex="-1"
+			aria-labelledby="messageModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="messageModalLabel">Modal title</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div id="js-modal-content" class="modal-body">
+
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal"
+						>
+							Fermer
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
