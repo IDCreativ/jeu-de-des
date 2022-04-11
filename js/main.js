@@ -35,6 +35,12 @@ newGame.addEventListener("click", function () {
 	resetGlobalPoints();
 	document.querySelector("#player-1").classList.add("player-active");
 	document.querySelector("#player-2").classList.remove("player-active");
+	document.querySelector("#messageModalLabel").innerHTML = "New Game";
+	document.querySelector("#messageModalBody").innerHTML = `
+		<div class="alert alert-info text-center" role="alert">
+			The game has been reset.
+		</div>
+	`;
 	myModal.show();
 });
 

@@ -47,7 +47,7 @@
 						<span class="icon">
 							<i class="fal fa-plus fa-2x"></i>
 						</span>
-						<span>New Game</span>
+						<span class="noselect">New Game</span>
 					</div>
 
 					<div id="the-dice" class="shadow">
@@ -59,13 +59,13 @@
 							<span class="icon">
 								<i class="fal fa-sync fa-2x"></i>
 							</span>
-							<span>Roll dice</span>
+							<span class="noselect">Roll dice</span>
 						</div>
 						<div id="js-hold">
 							<span class="icon">
 								<i class="fal fa-inbox-in fa-2x"></i>
 							</span>
-							<span>Hold</span>
+							<span class="noselect">Hold</span>
 						</div>
 					</div>
 				</div>
@@ -91,13 +91,11 @@
 							aria-label="Close"
 						></button>
 					</div>
-					<div id="js-modal-content" class="modal-body">
-
-					</div>
+					<div id="messageModalBody" class="modal-body"></div>
 					<div class="modal-footer">
 						<button
 							type="button"
-							class="btn btn-secondary"
+							class="btn btn-success"
 							data-bs-dismiss="modal"
 						>
 							Fermer
