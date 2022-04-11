@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  background: rgb(164, 119, 73);
+  background: linear-gradient(0deg, rgb(164, 119, 73) 0%, rgb(172, 155, 136) 100%);
+  padding: 20px;
+  height: 100vh;
+  width: 100vw;
+}
+
+#app,
+#playground,
+.row,
+#player-1,
+#player-2 {
+  height: 100%;
+}
+
+#playground {
+  position: relative;
+}
+#playground #interface {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 100%;
+  padding: 50px 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#playground #interface #the-dice {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  background: white;
+  overflow: hidden;
+}
+#playground #interface #the-dice img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#playground #interface #js-new-game,
+#playground #interface #js-roll-dice,
+#playground #interface #js-hold {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+#playground #interface #js-new-game:hover,
+#playground #interface #js-roll-dice:hover,
+#playground #interface #js-hold:hover {
+  cursor: pointer;
+}
+#playground #interface #js-new-game .icon,
+#playground #interface #js-roll-dice .icon,
+#playground #interface #js-hold .icon {
+  margin: 0 15px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #e75050;
+}
+#playground #interface #js-new-game .icon i,
+#playground #interface #js-roll-dice .icon i,
+#playground #interface #js-hold .icon i {
+  font-size: 1rem;
+  color: #e75050;
+}
+#playground #interface .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 115px;
+  padding: 0 50px;
+}
+
+#player-1,
+#player-2 {
+  padding: 50px 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#player-1 .current,
+#player-2 .current {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  height: 115px;
+  background-color: #e75050;
+  text-align: center;
+}
+#player-1 .current span,
+#player-2 .current span {
+  color: black;
+  text-transform: uppercase;
+}
+#player-1 .current .score,
+#player-2 .current .score {
+  color: white;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+#player-1 .global .title,
+#player-2 .global .title {
+  position: relative;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: #d0d0d0;
+  text-align: center;
+}
+#player-1 .global .global-score,
+#player-2 .global .global-score {
+  font-weight: 300;
+  font-size: 5rem;
+  color: #e75050;
+  text-align: center;
+}
+#player-1.active .global .title,
+#player-2.active .global .title {
+  color: black;
+}
+#player-1.active .global .title:after,
+#player-2.active .global .title:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: -50px;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-color: #e75050;
+  border-radius: 50%;
+}
+
+#player-1 {
+  background: #f5f5f5;
+}
+
+#player-2 {
+  background: #ffffff;
+}/*# sourceMappingURL=app.css.map */

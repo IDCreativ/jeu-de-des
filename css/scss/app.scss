@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+// Variables
+$my-red: #e75050;
+$my-font: "Lato", sans-serif;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $my-font;
+}
+
+body {
+	font-family: $my-font;
+	font-size: 16px;
+	background: rgb(164, 119, 73);
+	background: linear-gradient(
+		0deg,
+		rgba(164, 119, 73, 1) 0%,
+		rgba(172, 155, 136, 1) 100%
+	);
+	padding: 20px;
+	height: 100vh;
+	width: 100vw;
+}
+
+#app,
+#playground,
+.row,
+#player-1,
+#player-2 {
+	height: 100%;
+}
+
+#playground {
+	position: relative;
+	#interface {
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 300px;
+		height: 100%;
+		padding: 50px 0 100px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		#the-dice {
+			width: 150px;
+			height: 150px;
+			border-radius: 8px;
+			background: white;
+			overflow: hidden;
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: contain;
+			}
+		}
+		#js-new-game,
+		#js-roll-dice,
+		#js-hold {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 20px;
+			text-transform: uppercase;
+			&:hover {
+				cursor: pointer;
+			}
+			.icon {
+				margin: 0 15px 0 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				border: 1px solid $my-red;
+				i {
+					font-size: 1rem;
+					color: $my-red;
+				}
+			}
+		}
+		.bottom {
+			display: flex;
+			flex-direction: column;
+            justify-content: space-between;
+			align-items: center;
+            height: 115px;
+			padding: 0 50px;
+		}
+	}
+}
+
+#player-1,
+#player-2 {
+	padding: 50px 0 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	.current {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 50px;
+        height: 115px;
+		background-color: $my-red;
+		text-align: center;
+		span {
+			color: black;
+			text-transform: uppercase;
+		}
+		.score {
+			color: white;
+			font-size: 3rem;
+			line-height: 3rem;
+		}
+	}
+	.global {
+		.title {
+            position: relative;
+			font-weight: 300;
+			font-size: 3rem;
+            line-height: 3rem;
+			text-transform: uppercase;
+			color: #d0d0d0;
+			text-align: center;
+		}
+		.global-score {
+			font-weight: 300;
+			font-size: 5rem;
+			color: $my-red;
+			text-align: center;
+		}
+	}
+    &.active {
+        .global {
+            .title {
+                color: black;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    right: -50px;
+                    transform: translateY(-50%);
+                    width: 15px;
+                    height: 15px;
+                    background-color: $my-red;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+#player-1 {
+	background: #f5f5f5;
+}
+
+#player-2 {
+	background: #ffffff;
+}
